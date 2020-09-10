@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+<model name="PortaInternaDireita">
+  <pose>0 0 0.5 0 0 0</pose>
+  <static>true</static>
+    <link name="link">      
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>2.15 3.5 0.94</size>
+          </box>
+        </geometry>
+      </collision>     
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.94 0.035 2.15</size>
+          </box>	
+        </geometry>
+	<material>
+          <script>
+            <uri>model://PortaInternaDireita/materials/scripts</uri>
+            <uri>model://PortaInternaDireita/materials/textures</uri>
+            <name>TexturaPortaInternaDireita/Image</name>
+          </script>
+        </material>	
+      </visual>      
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,13 @@
+material TexturaPortaInternaEsquerda/Image
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture porta_esquerda.png
+      }
+    }
+  }
+}

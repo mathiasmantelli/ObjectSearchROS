@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+<model name="my_model">
+  <pose>0 0 0.5 0 0 0</pose>
+  <static>true</static>
+    <link name="link">      
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 0.001 1</size>
+          </box>
+        </geometry>
+      </collision>     
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 0.001 1</size>
+          </box>	
+        </geometry>
+	<material>
+          <script>
+            <uri>model://Placa/materials/scripts</uri>
+            <uri>model://Placa/materials/textures</uri>
+            <name>TexturaPlaca/Image</name>
+          </script>
+        </material>	
+      </visual>      
+    </link>
+  </model>
+</sdf>

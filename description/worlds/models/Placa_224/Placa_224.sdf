@@ -1,0 +1,29 @@
+﻿<?xml version='1.0'?>﻿    <sdf version="1.4">
+﻿    <model name="placa_224">
+﻿      <pose>0 0 0.5 0 0 0</pose>
+﻿      <static>true</static>
+﻿        <link name="link">
+﻿          <collision name="collision">
+﻿            <geometry>
+﻿              <box>
+﻿                <size>0.268 0.001 0.268</size>
+﻿              </box>
+﻿            </geometry>
+﻿          </collision>
+﻿          <visual name="visual">
+﻿            <geometry>
+﻿              <box>
+﻿                <size>0.268 0.001 0.268</size>
+﻿              </box>
+﻿            </geometry>
+﻿        <material>
+﻿              <script>
+﻿                <uri>model://Placa_224/Materials/Scripts</uri>
+﻿                <uri>model://Placa_224/Materials/Textures</uri>
+﻿                <name>TexturaPlaca_224/Image</name>
+﻿              </script>
+﻿            </material>
+﻿          </visual>
+﻿        </link>
+﻿      </model>
+﻿    </sdf>

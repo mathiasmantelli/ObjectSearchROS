@@ -1,0 +1,21 @@
+<launch>
+  <arg name="urdf" default="$(find phi_exploration)/description/urdf/pioneer3dx-rosaria.urdf.xacro" />
+
+<!--  <param name="robot_description" textfile="$(arg urdf)" />-->
+  <param name="robot_description" command="$(find xacro)/xacro $(arg urdf)" />
+
+  <node name="rosaria_phi" pkg="rosaria_phi" type="RosAria" output="screen" args="_sonar_frame:=front_sonar _publish_aria_lasers:=true _port:=192.168.1.11:10002"/>
+
+<!--
+  <node name="rosaria_phi" pkg="rosaria_phi" type="RosAria" output="screen" args="_sonar_frame:=front_sonar _publish_aria_lasers:=true _port:=localhost"/>
+--> 
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find phi_exploration)/phi-rosaria.rviz" required="true" />
+
+<!-- SLAM -->
+  <include file="$(find phi_exploration)/launch/slam.launch"/> 
+
+</launch>

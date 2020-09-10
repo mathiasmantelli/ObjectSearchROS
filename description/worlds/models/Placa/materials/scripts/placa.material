@@ -1,0 +1,14 @@
+material TexturaPlaca/Image
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture placa_base.png
+      }
+    }
+  }
+}

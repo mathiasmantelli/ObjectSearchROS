@@ -1,0 +1,18 @@
+<launch>
+
+<!--   ####    GMAPPING    #### -->
+<!-- rosrun gmapping slam_gmapping scan:=rosaria_phi/laser_laserscan -->
+  <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping" args="scan:=rosaria_phi/laser_laserscan">
+    <param name="~delta" value="0.1" />
+    <param name="~map_update_interval" value="2" />
+  </node>
+
+<!--   ####    HECTOR    #### -->
+<!--  <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen">-->
+<!--    <param name="scan_topic" value="rosaria_phi/laser_laserscan" />-->
+<!--    <param name="base_frame" value="base_link" />-->
+<!--    <param name="odom_frame" value="odom"/>-->
+<!--    <param name="output_timing" value="false"/>-->
+<!--  </node>-->
+
+</launch>

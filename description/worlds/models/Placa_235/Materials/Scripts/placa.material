@@ -1,0 +1,13 @@
+material TexturaPlaca_235/Image
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture 235.png
+      }
+    }
+  }
+}
